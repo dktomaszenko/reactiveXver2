@@ -1,3 +1,4 @@
+import 'bootstrap';
 import component from "./component";
 import "./styles/main.scss";
 
