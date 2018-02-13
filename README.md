@@ -12,3 +12,4 @@ https://webpack.js.org/loaders/imports-loader/#install
 
 Here is quick start example project with Webpack 3 + Bootstrap 4: 
 https://github.com/xdvarpunen/webpackboot
+https://getbootstrap.com/docs/4.0/getting-started/webpack/
