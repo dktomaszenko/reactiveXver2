@@ -4,7 +4,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 module.exports = {
     entry: {
-        app: './src/index.js'
+        app: './src/main.js'
+    },
+    output: {
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, 'dist')
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
@@ -12,15 +16,11 @@ module.exports = {
             title: 'Production'
         }),
         new webpack.ProvidePlugin({
-            '$': "jquery",
-            'jQuery': "jquery",
-            'Popper': 'popper.js'
+            $: "jquery", // Used for Bootstrap JavaScript components
+            jQuery: "jquery", // Used for Bootstrap JavaScript components
+            Popper: ['popper.js', 'default'] // Used for Bootstrap dropdown, popup and tooltip JavaScript components
         })
     ],
-    output: {
-        filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist')
-    },
     module: {
         rules: [{
             test: /\.scss$/,
