@@ -14,3 +14,5 @@ Here is quick start example project with Webpack 3 + Bootstrap 4:
 https://github.com/xdvarpunen/webpackboot
 https://getbootstrap.com/docs/4.0/getting-started/webpack/
 https://github.com/twbs/bootstrap/issues/22196
+
+https://github.com/shakacode/bootstrap-loader#installation
