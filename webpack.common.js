@@ -1,8 +1,8 @@
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
-module.exports = {
+const plug = require('./webpack.plug.js');
+const merge = require('webpack-merge');
+
+module.exports = merge(plug, {
     entry: {
         app: './src/main.js'
     },
@@ -10,18 +10,6 @@ module.exports = {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
-    plugins: [
-        new CleanWebpackPlugin(['dist']),
-        new HtmlWebpackPlugin({
-            title: 'Production',
-            template: './src/index.html'
-        }),
-        new webpack.ProvidePlugin({
-            $: "jquery", // Used for Bootstrap JavaScript components
-            jQuery: "jquery", // Used for Bootstrap JavaScript components
-            Popper: ['popper.js', 'default'] // Used for Bootstrap dropdown, popup and tooltip JavaScript components
-        })
-    ],
     module: {
         rules: [{
             test: /\.scss$/,
@@ -34,4 +22,4 @@ module.exports = {
             }]
         }]
     }
-};
+});
