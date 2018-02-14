@@ -11,9 +11,10 @@ module.exports = {
             template: './src/index.html'
         }),
         new webpack.ProvidePlugin({
-            $: "jquery", // Used for Bootstrap JavaScript components
-            jQuery: "jquery", // Used for Bootstrap JavaScript components
-            Popper: ['popper.js', 'default'] // Used for Bootstrap dropdown, popup and tooltip JavaScript components
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery',
+            Tether: 'tether'
         })
     ]
 };
