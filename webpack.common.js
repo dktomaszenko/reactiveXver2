@@ -13,7 +13,8 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            title: 'Production'
+            title: 'Production',
+            template: './src/index.html'
         }),
         new webpack.ProvidePlugin({
             $: "jquery", // Used for Bootstrap JavaScript components
