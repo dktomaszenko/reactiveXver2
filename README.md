@@ -20,3 +20,5 @@ https://github.com/shakacode/bootstrap-loader#installation
 https://medium.com/@estherfalayi/setting-up-webpack-for-bootstrap-4-and-font-awesome-eb276e04aaeb
 
 https://github.com/efalayi/wbf-starter-config
+
+https://v4-alpha.getbootstrap.com/components/card/
